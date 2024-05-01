@@ -1,0 +1,249 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #fbe7cc;
+    color: #240801;
+    font-family: "Birthstone", cursive;
+    font-size: x-large;
+    letter-spacing: 1px;
+}
+
+.header {
+    flex-direction: column;
+    background-image: linear-gradient(#571851, transparent), url(hands4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fbe7cc;
+    animation: bgRollingAnim 5.5s ease infinite;
+    margin: 5% 0;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 0;
+}
+
+.navbar {
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.navbar li a {
+    font-size: xx-large;
+    position: relative;
+    color: #783955;
+    text-decoration: none;
+    border-bottom: 2px dashed #989ca0;
+    padding-bottom: 2px;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.navbar li a:hover {
+    border: none;
+    padding-bottom: 0;
+}
+
+.navbar li.circle-behind a::before,
+.navbar li.circle-behind a::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    border: 4px solid #f6cb92;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.75);
+    z-index: -1;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.navbar li.circle-behind a:after {
+    border: 2px solid #f6cb92;
+    transition: all 0.25s;
+}
+
+.navbar li.circle-behind a:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.navbar li.circle-behind a:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.story,
+.wedding {
+    width: 100%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 2.5% 0;
+}
+
+.wedding {
+    background: #b9dbcb;
+}
+
+.img-container {
+    width: 45%;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 12.5px 12.5px 25px #42280540, -5px -5px 15px #4228051a, inset -2.5px -2.5px 7.5px #42280580;
+}
+
+.wedding .img-container {
+    box-shadow: -12.5px -12.5px 25px #182f2440, 5px 5px 15px #182f241a inset 2.5px 2.5px 7.5px #182f2480;
+}
+
+.img-container img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.text-container {
+    width: 45%;
+}
+
+.text-container p {
+    width: 100%;
+    text-align: justify;
+    margin: 2.5% 0;
+}
+
+.reminder-container {
+    flex-direction: column;
+    background-image: linear-gradient(#571851, transparent), url(flower3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fbe7cc;
+    animation: bgRollingAnim 5.5s ease infinite;
+}
+
+.reminder {
+    justify-content: space-evenly;
+}
+
+.reminder div {
+    width: max-content;
+    background: #80808040;
+    border: 1px solid #80808040;
+    border-radius: 16px;
+    box-shadow: 0 0 10px 1px #00000040;
+    backdrop-filter: blur(10px);
+    padding: 32px;
+}
+
+.reminder div span {
+    display: block;
+    width: 100%;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.reminder div div {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: blur(0);
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+.text-container .text-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2.5%;
+}
+
+.text-container .text-wrapper div {
+    width: 33%;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.invite {
+    padding-left: 100px;
+}
+
+@keyframes bgRollingAnim {
+    0%, 100% {
+        background-position: top;
+    }
+
+    22.5%, 27.5%, 72.5%, 77.5% {
+        background-position: center;
+    }
+
+    50% {
+        background-position: bottom;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container,
+    .story,
+    .wedding,
+    .img-container,
+    .text-container,
+    .text-wrapper,
+    .reminder-container,
+    .reminder div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .img-container,
+    .text-container,
+    .text-wrapper div,
+    .reminder div {
+        width: 90%;
+        margin: 2% auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin-bottom: 10px;
+    }
+
+    .invite {
+        padding-left: 0;
+    }
+}
+
+
