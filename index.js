@@ -26,7 +26,5 @@ function initRemainingTime(id, endTime) {
   updateRemainingTime();
   var timeInterval = setInterval(updateRemainingTime, 1000);
 }
-var timeforBigDay = new Date(Date.parse(new Date()) + 1 * 24 * 60 * 60 * 1000);
+var timeforBigDay = new Date(2024, 4, 10); // 10th May 2024
 initRemainingTime("reminder-clock", timeforBigDay);
-
-
