@@ -23,7 +23,7 @@ body {
 
 .header {
     flex-direction: column;
-    background-image: linear-gradient(#571851, transparent), url(hands4.jpg);
+    background-image: linear-gradient(#571851, transparent), url(images/hands4.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -137,7 +137,7 @@ img {
 
 .reminder-container {
     flex-direction: column;
-    background-image: linear-gradient(#571851, transparent), url(flower3.jpg);
+    background-image: linear-gradient(#571851, transparent), url(images/flower3.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
